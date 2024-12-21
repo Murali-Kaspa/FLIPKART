@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        
+.background {
+    background-image: url("https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350882/pexels-karolina-grabowska-5650016_cizmck.jpg");
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+}
+
+
+.head {
+    color: #00000;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.para {
+    color: #000000;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.custom-button {
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.reviewman {
+    width: 80%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .reviewman {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .reviewpics {
+        width: 50%;
+    }
+}
+
+.star {
+    color: orange;
+}
+
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.offers {
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.menu {
+    background-color: white;
+}
+
+.sub-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.productname {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.productimage {
+    width: 80%;
+}
+
+.link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.products {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewpics {
+    border-radius: 16px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    width: 270px;
+}
+
+.bottom-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.delivery-section {
+    background-color: white;
+}
+
+.delivery-para {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.payment-card-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 28px;
+}
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-bolt"></i>
+            </a>
+            <h4>Flash Electronics</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" id="navItem1" href="#wcuSection">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-link" href="#exploreMenuSection" id="navItem2">Products</a>
+                    <a class="nav-link" href="#deliveryPaymentSection" id="navItem3">Reviews</a>
+                    <a class="nav-link" href="#followUsSection" id="navItem4">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="background d-flex justify-content-center flex-column">
+        <div class="text-center">
+            <h1 class="head mb-3">Get Gadgets From Your Mobile</h1>
+            <p class="para mb-4">Flat 30% Off on selected products</p>
+            <button class="custom-button">View Menu</button>
+        </div>
+    </div>
+    <div class="wcu-section pt-5 pb-5" id="wcuSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="wcu-section-heading">Why Choose Us?</h1>
+                    <p class="wcu-section-description">
+                        We use only Genuine product's
+
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629352542/pexels-free-creative-stuff-1476321_kyj1ve.jpg" class="productimage" />
+                        <h1 class="wcu-card-title mt-3">Our Service</h1>
+                        <p class="wcu-card-description">
+                            We Provide Genuine Products Only. No first quality products. We get Products directly from manfacturer. Thats We give a lot of offers
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629352467/pexels-karolina-grabowska-4498118_gz3wnm.jpg" />
+                        <h1 class="wcu-card-title mt-3">New Stock</h1>
+                        <p class="wcu-card-description">
+                            We updated New stock every week. So we Get a lot of models. We have what u want so Why late come and shop With us.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350882/pexels-karolina-grabowska-5650016_cizmck.jpg" />
+                        <h1>Best Offers</h1>
+                        <p>
+                            Monsoon Sale is Live
+                            <span class="offers">30% OFF</span>
+                            and Exclusive Promo Codes on All Online Payments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu pt-5 pb-5" id="sectionmenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="menu-section-heading">Our Products</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350880/pexels-karolina-grabowska-5208307_a89qys.jpg" />
+                        <h1 class="productname">Mobiles</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350886/pexels-daria-shevtsova-705675_tjrbl3.jpg" />
+                        <h1 class="productname">Laptops</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629351372/pexels-free-creative-stuff-1422220_bzljuj.jpg" />
+                        <h1 class="productname">Cameras</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629351459/pexels-marlene-lepp%C3%A4nen-1183266_fciweu.jpg" />
+                        <h1 class="productname">Fashion</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350890/pexels-ksenia-chernaya-4740585_dvlyeh.jpg" />
+                        <h1 class="productname">Kitchen</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350881/pexels-adrienne-andersen-2254065_tg9lhh.jpg" />
+                        <h1 class="productname">Appliances</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350890/pexels-martin-p%C3%A9chy-1866149_bhbpvi.jpg" />
+                        <h1 class="productname">Furniture</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow products p-3 mb-3">
+                        <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629350887/pexels-ovan-62689_sltqfz.jpg" />
+                        <h1 class="productname">Accessories</h1>
+                        <a href="" class="link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!--ljxfhvhjbjhgfbkjfdbngjidfkjbijgbn-->
+
+                <div class="menu pt-5 pb-5" id="sectionmenu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="sub-heading">Reviews</h1>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow reviewpics p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349300/pexels-chloe-1043474_ckbqn4.jpg" />
+                                    <h1 class="productname">Peter</h1>
+                                    <p class="para">Great </p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349298/pexels-wallace-chuck-2659177_hwirlo.jpg" />
+                                    <h1 class="productname">Chris</h1>
+                                    <p class="para">Supercool deals</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349301/pexels-kevin-bidwell-3863793_ofebx1.jpg" />
+                                    <h1 class="productname">Robert</h1>
+                                    <p class="para">Cool Stuff At Reasonable prices</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349412/pexels-andrea-piacquadio-941693_veekwb.jpg" />
+                                    <h1 class="productname">David</h1>
+                                    <p class="para">Massive Deals</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349299/pexels-andrea-piacquadio-874158_hqxyoj.jpg" />
+                                    <h1 class="productname">Justin</h1>
+                                    <p class="para">Awesome Store With Great Deals</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629349298/pexels-elle-hughes-1680172_fnidba.jpg" />
+                                    <h1 class="productname">Sam</h1>
+                                    <p class="para">Great Products With low budget</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow products p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629174452/pexels-andrea-piacquadio-3762800_eorzbr.jpg" />
+                                    <h1 class="productname">Natasha</h1>
+                                    <p class="para">Love the Products</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fas fa-star-half star"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="shadow reviewpics p-3 mb-3">
+                                    <img class="reviewman" src="https://res.cloudinary.com/dikjlrkwb/image/upload/c_scale,h_1920,w_1920/v1629171801/pexels-andrea-piacquadio-3799821_zwly84.jpg" />
+                                    <h1 class="productname">Hank</h1>
+                                    <p class="para">The Products are Awesome</p>
+                                    <div class="d-flex flex-row">
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+                                        <i class="fa fa fa-star star"></i>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!--ffmfdkm-->
+
+                            <div class="bottom pt-5 pb-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+                                            <div class="text-center">
+                                                <img src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629292110/suraj-kardile-kFLVcrIeErQ-unsplash_zhk9co.jpg" class="about-img" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <h1 class="bottom-heading">
+                                                New, Genuine, Cheap Rates
+                                            </h1>
+                                            <p class="description">
+                                                XYZ is a partnership firm owned and operated by A and B in the city of Davis, California.
+                                                You can find all types of Electronics, Appliances, Fashion, Furniture etc...
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-section pt-5 pb-5" id="deliveryPaymentSection">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5 order-1 order-md-2">
+                                            <div class="text-center">
+                                                <img class="productimage" src="https://res.cloudinary.com/dikjlrkwb/image/upload/v1629351781/pexels-mockup-photos-821222_1_rfbxyh.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-7 order-2 order-md-1">
+                                            <h1 class="head">
+                                                Delivery and Payment
+                                            </h1>
+                                            <p class="delivery-para">
+                                                Enjoy hassle-free payment with the plenitude of payment options
+                                                available for you. Get live tracking and locate your food on a
+                                                live map. It's quite a sight to see your food arrive to your door.
+                                                Plus, you get a 5% discount on every order every time you pay
+                                                online.
+                                            </p>
+                                            <button class="custom-button">Order Now</button>
+                                            <div class="mt-3">
+                                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
+                                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
+                                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h1 class="follow-us-section-heading">Contact Us</h1>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex flex-row justify-content-center">
+
+                                                <div class="follow-us-icon-container">
+
+                                                    <i class="fab fa-twitter icon"></i>
+                                                </div>
+
+                                                <div class="follow-us-icon-container">
+                                                    <i class="fab fa-instagram icon"></i>
+                                                </div>
+                                                <div class="follow-us-icon-container">
+                                                    <i class="fab fa-facebook icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-section pt-5 pb-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <i class="fas fa-bolt"></i>
+                                            <h1 class="footer-section-mail-id">flashelectronics@gmail.com</h1>
+                                            <p class="footer-section-address">
+                                                Mumbai,India
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+</body>
+
+</html>
