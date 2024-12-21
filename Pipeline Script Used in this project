@@ -1,0 +1,43 @@
+#Pipeline Script
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Installing Git') {
+            steps {
+                sh '''
+                sudo yum install git -y
+                git --version
+                '''
+            }
+        }
+        stage('Cloning Git') {
+            steps {
+                git branch: 'main', credentialsId: 'e7f6a44d-3907-4f86-8764-1c8ba1e6fe3b', url: 'https://github.com/Murali-Kaspa/FLIPKART.git'
+            }
+        }
+        stage('Installing Httpd') {
+            steps {
+                sh '''
+                sudo yum install httpd -y
+                sudo service httpd start
+                '''
+            }
+        }
+        stage('Copying Git to Httpd') {
+            steps {
+                sh '''
+                sudo cp /var/lib/jenkins/workspace/CICD-Project/index.html /var/www/html
+                '''
+            }
+        }
+        stage('Restarting Httpd') {
+            steps {
+                sh '''
+                sudo service httpd restart
+                '''
+            }
+        }
+    }
+}
